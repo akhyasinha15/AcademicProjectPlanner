@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+
+<style>
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #00ffe0, #00bcd4, #3f51b5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-sub {
+    color: #cfd8dc;
+    font-size: 1.2rem;
+}
+
+.login-card {
+    backdrop-filter: blur(10px);
+    background: rgba(0,0,0,0.6);
+    border: 1px solid #00ffe0;
+    box-shadow: 0 0 25px rgba(0,255,224,0.3);
+    border-radius: 15px;
+}
+
+.hero-img {
+    max-width: 100%;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-15px);}
+    100% {transform: translateY(0px);}
+}
+</style>
+
+<div class="row align-items-center">
+
+    <!-- LEFT SIDE TEXT -->
+    <div class="col-md-6">
+
+        <h1 class="hero-title">Plan Projects<br>Smarter</h1>
+
+        <p class="hero-sub mt-3">
+            Your AI-powered Academic Planning Tool
+            Generate Architecture, Timeline & Insights instantly.
+        </p>
+
+        <button class="btn mt-3 px-4">Explore System 🚀</button>
+
+    </div>
+
+    <!-- RIGHT SIDE IMAGE -->
+    <div class="col-md-6 text-center">
+        <img src="{{ url_for('static', filename='images/hero.png') }}" class="hero-img">
+    </div>
+
+</div>
+
+---
+
+<!-- LOGIN CARD -->
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+
+        <div class="login-card p-4 text-center">
+
+            <h3 class="mb-3 glow">🔐 Sign In</h3>
+
+            <form method="POST">
+                <input name="username" class="form-control mb-3" placeholder="Username">
+                <input type="password" name="password" class="form-control mb-3" placeholder="Password">
+                <button class="btn w-100">Enter System</button>
+            </form>
+
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
