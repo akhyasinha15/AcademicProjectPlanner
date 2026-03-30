@@ -15,3 +15,22 @@ aligns with existing research on architectural decision support while focusing o
 transparency, and academic usability. This approach demonstrates that even minimal automation can 
 significantly enhance planning accuracy and architectural clarity for novice developers and students, 
 while serving as a foundation for future intelligent extensions.
+
+**Process** 
+1. Requirement Analysis
+We identify and document the inputs, outputs, and functional behavior required for automating 
+project planning and high-level architecture generation.
+2. System Design
+We design the layered system architecture and define rule-based logic for generating project 
+plans and architectural recommendations.
+3. Database / Data Structure Design
+We design simple data structures to store project parameters and generated planning results.
+4. Implementation
+We develop Python functions to generate phase-wise project plans and automatically suggest 
+suitable system architectures.
+5. User Interface Development
+
+<img width="1195" height="671" alt="image" src="https://github.com/user-attachments/assets/5e0b33ae-09fe-4902-ad99-275bad7b678b" />
+
+We develop a basic console or Flask-based web interface to collect user inputs and display 
+generated outputs.
