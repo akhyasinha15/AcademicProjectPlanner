@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Academic Project Planner</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #f4f6f9;
+        }
+        .card {
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">📊 Academic Project Planner</h1>
+        <p class="text-muted">Automated Planning & Architecture Design Tool</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+
+            <div class="card shadow p-4">
+
+                <form method="POST">
+
+                    <div class="mb-3">
+                        <label class="form-label">Project Type</label>
+                        <select name="project_type" class="form-select">
+                            <option value="mini">Mini Project</option>
+                            <option value="final">Final Year Project</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Team Size</label>
+                        <input type="number" name="team_size" class="form-control" placeholder="Enter team size">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Duration (Weeks)</label>
+                        <input type="number" name="duration" class="form-control" placeholder="Enter duration">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Technology</label>
+                        <input type="text" name="technology" class="form-control" placeholder="Python / Java / Web">
+                    </div>
+
+                    <button class="btn btn-primary w-100">Generate Plan 🚀</button>
+
+                </form>
+
+                {% if errors %}
+                <div class="alert alert-danger mt-3">
+                    <ul>
+                        {% for error in errors %}
+                        <li>{{error}}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                {% endif %}
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
